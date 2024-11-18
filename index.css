@@ -1,0 +1,145 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background: #202020;
+  font-size: 18px;
+}
+
+button {
+  font-family: "inherit";
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(80%);
+}
+
+button:focus {
+  filter: brightness(60%);
+}
+
+#calculator {
+  posision: relative;
+  width: 100%;
+  background: rgba(255, 255, 255, .1);
+  border-radius: 4px;
+  box-shadow: 5px 5px 1rem rgba(0, 0, 0, .2);
+}
+
+#area-display {
+  position: relative;
+  width: 100%;
+  background: rgba(255, 255, 255, .1);
+  border-bottom:1px solid rgba(0,0,0,.3);
+  text-align:right;
+}
+
+#steps {
+  position: relative;
+  width: 100%;
+  padding: 1.5rem 1.25rem .5rem;
+  font-size: 14px;
+  color:rgba(255, 255, 255, .4);
+}
+
+#steps.off {
+  opacity: 0;
+}
+
+#display {
+  display: block;
+  posision: relative;
+  width: 100%;
+  height: auto;
+  white-space: normal;
+  word-break: break-all;
+  padding: 0 1rem;
+  padding-bottom: 1.25rem;
+  background: transparent;
+  border: none;
+  text-align: right;
+  font-family: inherit;
+  font-size: 2rem;
+  color: #fff;
+}
+
+/* 버튼영역 */
+#area-btn {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.nums {
+  display: flex;
+  flex-flow: row wrap;
+  position: relative;
+  width: 75%;
+}
+
+.num{
+  display:block;
+  width:33.33%; 
+  aspect-ratio:1/1;
+  border:1px solid rgba(0,0,0,.2);
+  background:#707070;
+  font-size:1.5rem;
+  color:rgba(255,255,255,1);
+  }
+
+.num[data-val="-1"],
+.num[data-val="."] {
+  background: rgba(255, 255, 255, .1)
+}
+
+/* 연산 버튼 */
+.ops {
+  position: relative;
+  width: 25%;
+}
+
+.op {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1/1;
+  background: rgba(255,255,255, .1);
+  border: 1px solid rgba(0, 0, 0, .2);
+  font-size: 2rem;
+  color: #fff;
+}
+
+#reset {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1/1;
+  background: rgba(36, 55, 165, 0.1);
+  border: 1px solid rgba(0, 0, 0, .2);
+  font-size: 2rem;
+  color: #fff;
+}
+
+#btn_result{
+  display:block;
+  width:100%;
+  aspect-ratio:1/.33;
+  background:rgba(93, 128, 241, 0.3);
+  border:1px solid rgba(0,0,0,.2);
+  font-size:2rem;
+  font-weight:bold;
+  color:#fff;
+  mix-blend-mode:hard-light;
+  }
